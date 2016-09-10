@@ -196,6 +196,16 @@
         </li>
       
         
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
         <li class="menu-item menu-item-archives">
           <a href="/archives" rel="section">
             
@@ -264,8 +274,8 @@
             
               
                 
-                <a class="post-title-link" href="/hello-world/" itemprop="url">
-                  Hello World
+                <a class="post-title-link" href="/7z用法/" itemprop="url">
+                  7z命令
                 </a>
               
             
@@ -278,19 +288,38 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-09-10T17:06:35+08:00" content="2016-09-10">
+            <time itemprop="dateCreated" datetime="2016-09-10T00:00:00+08:00" content="2016-09-10">
               2016-09-10
             </time>
           </span>
 
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/linux常用命令/" itemprop="url" rel="index">
+                    <span itemprop="name">linux常用命令</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
           
 
           
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/hello-world/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="hello-world/" itemprop="commentsCount"></span>
+                <a href="/7z用法/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="7z用法/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -315,15 +344,680 @@
       
         
           
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+            <h1 id="7z命令"><a href="#7z命令" class="headerlink" title="7z命令"></a>7z命令</h1><blockquote>
+<p><strong>语法</strong><br><code>7z [adeltux] [-] [SWITCH] &lt;ARCHIVE_NAME&gt; &lt;ARGUMENTS&gt;...</code>    </p>
+</blockquote>
+<h3 id="FUNCTION-LETTERS"><a href="#FUNCTION-LETTERS" class="headerlink" title="FUNCTION LETTERS"></a>FUNCTION LETTERS</h3><table>
+<thead>
+<tr>
+<th style="text-align:center">字母</th>
+<th style="text-align:left">意义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">a</td>
+<td style="text-align:left">Add</td>
+</tr>
+<tr>
+<td style="text-align:center">d</td>
+<td style="text-align:left">Delete</td>
+</tr>
+<tr>
+<td style="text-align:center">e</td>
+<td style="text-align:left">Extract</td>
+</tr>
+<tr>
+<td style="text-align:center">l</td>
+<td style="text-align:left">List</td>
+</tr>
+<tr>
+<td style="text-align:center">t</td>
+<td style="text-align:left">Test</td>
+</tr>
+<tr>
+<td style="text-align:center">u</td>
+<td style="text-align:left">Update</td>
+</tr>
+<tr>
+<td style="text-align:center">x</td>
+<td style="text-align:left">eXtract with full paths</td>
+</tr>
+</tbody>
+</table>
+<h3 id="压缩"><a href="#压缩" class="headerlink" title="压缩"></a>压缩</h3><p>1、<code>7z a archive_name files</code> 默认格式.7z 把文件打包成 archive_name.7z<br>2、<code>7z a -t格式  archive_name files</code> 把文件打包成 指定格式【7z, zip, gzip, bzip2 or tar. 7z format is default】<br>3、<code>7z a archive_name files -v2m</code> 把文件分卷打包，每卷2m 【b k m g】</p>
+<h3 id="解压"><a href="#解压" class="headerlink" title="解压"></a>解压</h3><p>1、<code>7z x archive_name</code> 解压到当前目录<br>2、<code>7z x archive_name -oDir</code> 解压到指定目录     </p>
+<h1 id="tar命令"><a href="#tar命令" class="headerlink" title="tar命令"></a>tar命令</h1><h3 id="压缩-1"><a href="#压缩-1" class="headerlink" title="压缩"></a>压缩</h3><p><code>tar -czvf ***.tar.gz</code><br><code>tar -cjvf ***.tar.bz2</code></p>
+<h3 id="解压缩"><a href="#解压缩" class="headerlink" title="解压缩"></a>解压缩</h3><p><code>tar -xzvf ***.tar.gz</code><br><code>tar -xjvf ***.tar.bz2</code>   </p>
+<p>参数：</p>
+<p>-c：建立一个压缩档案的参数指令(create的意思)<br>-x：解开一个压缩档案的参数指令<br>-t：查看tarfile 里面的档案    </p>
+<p>特别注意，在参数的下达中， c/x/t 仅能存在一个, 不可同时存在.</p>
+<p>-z：是否同时具有 gzip 的属性？亦即是否需要用 gzip 压缩？<br>-j：是否同时具有 bzip2 的属性？亦即是否需要用 bzip2 压缩？<br>-v：压缩的过程中显示档案,这个常用，但不建议用在背景执行过程<br>-f：使用档名，请留意，在 f 之后要立即接档名 不要再加参数</p>
+<p>–exclude FILE：在压缩的过程中，不要将 FILE 打包！</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/grep命令/" itemprop="url">
+                  grep命令
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-09-10T00:00:00+08:00" content="2016-09-10">
+              2016-09-10
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/linux常用命令/" itemprop="url" rel="index">
+                    <span itemprop="name">linux常用命令</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/grep命令/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="grep命令/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="grep命令"><a href="#grep命令" class="headerlink" title="grep命令"></a>grep命令</h1><blockquote>
+<p>grep命令是一种强大的文本搜索工具，它能使用正则表达式搜索文本，并把匹配的行打印出来。</p>
+</blockquote>
+<h4 id="在文件中查找模式（单词）"><a href="#在文件中查找模式（单词）" class="headerlink" title="在文件中查找模式（单词）"></a>在文件中查找模式（单词）</h4><p>在 <code>makefile</code> 中查找 <code>PROGRAM</code> 字符串</p>
+<p><strong>grep PROGRAM makefile</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">grep PROGRAM makefile</div><div class="line">#    * to specify your favorite program name, set to &lt;PROGRAM&gt;</div><div class="line">PROGRAM   = mytest</div><div class="line">ifeq ($(PROGRAM),)</div><div class="line">  PROGRAM = $(word $(words $(CUR_PATH_NAMES)),$(CUR_PATH_NAMES))</div><div class="line">  ifeq ($(PROGRAM),)</div><div class="line">    PROGRAM = a.out</div><div class="line">all: $(PROGRAM)</div><div class="line">$(PROGRAM):$(OBJS)</div><div class="line">	$(RM) $(OBJS) $(PROGRAM) $(PROGRAM).exe</div><div class="line">	@echo &apos;PROGRAM     :&apos; $(PROGRAM)</div></pre></td></tr></table></figure></p>
+<h4 id="在-makefile-中查找空行-n-显示行号"><a href="#在-makefile-中查找空行-n-显示行号" class="headerlink" title="在 makefile 中查找空行( -n 显示行号)"></a>在 <code>makefile</code> 中查找空行( <code>-n</code> 显示行号)</h4><p><strong>grep -n ^$ makefile</strong></p>
+<h4 id="多文件查找"><a href="#多文件查找" class="headerlink" title="多文件查找"></a>多文件查找</h4><p>在所有已mk结尾的文件中查找 <strong><em>all</em></strong> 字符串</p>
+<p><strong>grep -n all *.mk</strong></p>
+<h4 id="使用-c-参数计算模式匹配到数量"><a href="#使用-c-参数计算模式匹配到数量" class="headerlink" title="使用 -c 参数计算模式匹配到数量"></a>使用 <code>-c</code> 参数计算模式匹配到数量</h4><p><strong>grep -c all *.mk</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">c++.templete.mk:6</div><div class="line">lsp.mk:4</div><div class="line">templete.mk:6</div></pre></td></tr></table></figure></p>
+<h4 id="使用-l-参数列出包含指定模式的文件的文件名"><a href="#使用-l-参数列出包含指定模式的文件的文件名" class="headerlink" title="使用 -l 参数列出包含指定模式的文件的文件名"></a>使用 <code>-l</code> 参数列出包含指定模式的文件的文件名</h4><p><strong>grep -l all *.mk</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">c++.templete.mk</div><div class="line">lsp.mk</div><div class="line">templete.mk</div></pre></td></tr></table></figure></p>
+<h4 id="使用-n-参数显示匹配行的行号"><a href="#使用-n-参数显示匹配行的行号" class="headerlink" title="使用 -n 参数显示匹配行的行号"></a>使用 <code>-n</code> 参数显示匹配行的行号</h4><p><strong>grep -n PHONY makefile</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">129:.PHONY: all objs clean distclean help show</div></pre></td></tr></table></figure></p>
+<h4 id="使用-r-参数递归查找特定模式"><a href="#使用-r-参数递归查找特定模式" class="headerlink" title="使用 -r 参数递归查找特定模式"></a>使用 <code>-r</code> 参数递归查找特定模式</h4><p><strong><strong>grep -r all *.mk</strong></strong></p>
+<h4 id="使用-i-参数忽略大小写"><a href="#使用-i-参数忽略大小写" class="headerlink" title="使用 -i 参数忽略大小写"></a>使用 <code>-i</code> 参数忽略大小写</h4><p><strong><em>*grep -i all </em>.mk*</strong>i*</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/GCC编译器选项解析/" itemprop="url">
+                  GCC编译器选项解析
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-08-08T00:00:00+08:00" content="2016-08-08">
+              2016-08-08
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/GCC编译器选项解析/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="GCC编译器选项解析/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="GCC编译器选项解析"><a href="#GCC编译器选项解析" class="headerlink" title="GCC编译器选项解析"></a>GCC编译器选项解析</h1><h2 id="总览"><a href="#总览" class="headerlink" title="总览"></a>总览</h2><p>总览(SYNOPSIS)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">gcc [options] filename ...</div><div class="line">g++ [options] filename ...</div></pre></td></tr></table></figure></p>
+<h3 id="总体选项-Overall-Option"><a href="#总体选项-Overall-Option" class="headerlink" title="总体选项(Overall Option)"></a>总体选项(Overall Option)</h3><table>
+<thead>
+<tr>
+<th>选项</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-c</td>
+<td>编译或汇编源文件,但是不作连接.编译器输出对应于源文件的目标文件.</td>
+</tr>
+<tr>
+<td>-o</td>
+<td>指定输出文件，如果没有使用 <code>-o</code> 选项,默认的输出结果是:可执行文件为 <code>a.out</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="调试选项-DEBUGGING-OPTION"><a href="#调试选项-DEBUGGING-OPTION" class="headerlink" title="调试选项(DEBUGGING OPTION)"></a>调试选项(DEBUGGING OPTION)</h3><table>
+<thead>
+<tr>
+<th>选项</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-g</td>
+<td>以操作系统的本地格式(stabs, COFF, XCOFF,或DWARF)，产生调试信息，GDB能够使用这些调试信息</td>
+</tr>
+<tr>
+<td>-g<em>level</em></td>
+<td>请求生成调试信息,同时用level指出需要多少信息，默认的level值是2；<br> level1: 输出最少量的信息,仅够在不打算调试的程序段内backtrace.包括函数和外部变量的描述,但是 没有局部变量和行号信息；<br>Level3: 包含更多的信息,如程序中出现的所有宏定义.当使用`-g3’选项的时候,某些调试器支持 宏扩展</td>
+</tr>
+</tbody>
+</table>
+<h4 id="预处理器选项-Preprocessor-Option"><a href="#预处理器选项-Preprocessor-Option" class="headerlink" title="预处理器选项(Preprocessor Option)"></a>预处理器选项(Preprocessor Option)</h4><table>
+<thead>
+<tr>
+<th>选项</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-Dmacro</td>
+<td>x</td>
+</tr>
+<tr>
+<td>-Dmacro=defn</td>
+<td>定义宏macro的内容为defn</td>
+</tr>
+<tr>
+<td>-Umacro</td>
+<td>取消宏macro，<code>-U</code> 选项在所有的 <code>-D</code> 选项之后处理</td>
+</tr>
+</tbody>
+</table>
+<h3 id="连接器选项-LINKER-OPTION"><a href="#连接器选项-LINKER-OPTION" class="headerlink" title="连接器选项(LINKER OPTION)"></a>连接器选项(LINKER OPTION)</h3><table>
+<thead>
+<tr>
+<th>选项</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-l<em>library</em></td>
+<td>连接名为library的库文件</td>
+</tr>
+<tr>
+<td>-shared</td>
+<td>生成一个共享目标文件，常搭配 <code>-fPIC</code> 使用</td>
+</tr>
+<tr>
+<td>-Wl,option</td>
+<td>把选项option传递给连接器.如果option中含有逗号,就在逗号处分割成多个选项.</td>
+</tr>
+<tr>
+<td>-symbolic</td>
+<td>建立共享目标文件的时候,把引用绑定到全局符号上</td>
+</tr>
+</tbody>
+</table>
+<h3 id="目录选项-DIRECTORY-OPTION"><a href="#目录选项-DIRECTORY-OPTION" class="headerlink" title="目录选项(DIRECTORY OPTION)"></a>目录选项(DIRECTORY OPTION)</h3><table>
+<thead>
+<tr>
+<th>选项</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-I<em>dir</em></td>
+<td>在<strong>头文件</strong>搜索路径列表中添加 <code>dir</code> 目录</td>
+</tr>
+<tr>
+<td>-L<em>dir</em></td>
+<td>在 <code>-l</code> 选项<strong>库文件</strong>搜索路径列表中添加 <code>dir</code> 目录</td>
+</tr>
+</tbody>
+</table>
+<h3 id="警告选项-WARNING-OPTION"><a href="#警告选项-WARNING-OPTION" class="headerlink" title="警告选项(WARNING OPTION)"></a>警告选项(WARNING OPTION)</h3><table>
+<thead>
+<tr>
+<th>选项</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-w</td>
+<td>禁止所有警告信息(不建议使用)</td>
+</tr>
+<tr>
+<td>-Wall</td>
+<td>开启大部分警告提示(建议使用)</td>
+</tr>
+<tr>
+<td>-Werror</td>
+<td>视警告为错误;出现任何警告即放弃编译</td>
+</tr>
+</tbody>
+</table>
+<h3 id="优化选项-OPTIMIZATION-OPTION"><a href="#优化选项-OPTIMIZATION-OPTION" class="headerlink" title="优化选项(OPTIMIZATION OPTION)"></a>优化选项(OPTIMIZATION OPTION)</h3><table>
+<thead>
+<tr>
+<th>选项</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-O0</td>
+<td>不优化</td>
+</tr>
+<tr>
+<td>-O1</td>
+<td>优化.对于大函数,优化编译占用稍微多的时间和相当大的内存.</td>
+</tr>
+<tr>
+<td>-O2</td>
+<td>多优化一些.除了涉及空间和速度交换的优化选项,执行几乎所有的优化工作.例如不进行循环展开(loop unrolling)和函数内嵌(inlining).<br>和-O选项比较,这个选项既增加了编译时间,也提高了生成代码的 运行效果.</td>
+</tr>
+<tr>
+<td>-O3</td>
+<td>优化的更多.除了打开-O2所做的一切,它还打开了-finline-functions选项</td>
+</tr>
+<tr>
+<td>-ffloat-store</td>
+<td>不要在寄存器中存放浮点变量.这样可以防止某些机器上不希望的过高精度,<br>如68000的浮点寄存器(来自 68881)保存的精度超过了double应该具有的精度. <br>对于大多数程序,过高精度只有好处.但是有些程序严格依赖于IEEE浮点数的定义.对这样的程序可以使用 <code>-ffloat-store</code>选项.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="机器相关选项-MACHINE-DEPENDENT-OPTION"><a href="#机器相关选项-MACHINE-DEPENDENT-OPTION" class="headerlink" title="机器相关选项(MACHINE DEPENDENT OPTION)"></a>机器相关选项(MACHINE DEPENDENT OPTION)</h3><table>
+<thead>
+<tr>
+<th>选项</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-mhard-float</td>
+<td>输出包含浮点指令的目标码.这是缺省选项</td>
+</tr>
+<tr>
+<td>-msoft-float</td>
+<td>警告:没有为SPARC提供GNU浮点库.一般说来使用该机型本地C编译器的相应部件,<br>但是不能直接用于交叉编译.你必须自己安排,提供用于交叉编译的库函数. <br><code>-msoft-float</code> 改变了输出文件中的调用约定;因此只有用这个选项编译整个程序才有意义.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="代码生成选项-CODE-GENERATION-OPTION"><a href="#代码生成选项-CODE-GENERATION-OPTION" class="headerlink" title="代码生成选项(CODE GENERATION OPTION)"></a>代码生成选项(CODE GENERATION OPTION)</h3><table>
+<thead>
+<tr>
+<th>选项</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-fpic</td>
+<td>如果支持这种目标机,编译器就生成位置无关目标码.适用于共享库(shared library).</td>
+</tr>
+<tr>
+<td>-fPIC</td>
+<td>如果支持这种目标机,编译器就输出位置无关目标码.<br>适用于动态连接(dynamic linking),即使分支需要大范围 转移.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="语言选项-LANGUAGE-OPTIONS"><a href="#语言选项-LANGUAGE-OPTIONS" class="headerlink" title="语言选项(LANGUAGE OPTIONS)"></a>语言选项(LANGUAGE OPTIONS)</h3><table>
+<thead>
+<tr>
+<th>选项</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-ansi</td>
+<td>支持符合ANSI标准的C程序</td>
+</tr>
+<tr>
+<td>-std=c99</td>
+<td>C99标准</td>
+</tr>
+<tr>
+<td>-std=c++11</td>
+<td>支持c++11</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<blockquote>
+<p><strong><em>参考：</em></strong><br><a href="http://www.shanghai.ws/gnu/gcc_1.htm" target="_blank" rel="external">GNU GCC 手册</a><br><a href="http://blog.csdn.net/lee244868149/article/details/38754153" target="_blank" rel="external">gcc常用编译选项汇总</a><br><a href="http://www.cnblogs.com/azraelly/archive/2012/07/07/2580839.html" target="_blank" rel="external">GCC编译详解</a></p>
+</blockquote>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/c++相关概念/" itemprop="url">
+                  c++相关概念
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-08-03T00:00:00+08:00" content="2016-08-03">
+              2016-08-03
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/c++相关概念/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="c++相关概念/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="c-相关概念"><a href="#c-相关概念" class="headerlink" title="c++相关概念"></a>c++相关概念</h1><h3 id="c-构造函数、析构函数、拷贝函数、赋值函数"><a href="#c-构造函数、析构函数、拷贝函数、赋值函数" class="headerlink" title="c++构造函数、析构函数、拷贝函数、赋值函数"></a>c++构造函数、析构函数、拷贝函数、赋值函数</h3><p>构造函数、析构函数、赋值函数是每个类最基本的的函数。每个类只有一个析构函数和一个赋值函数。       </p>
+<ul>
+<li><p>构造函数：是一种特殊的成员函数，无返回值，函数名与类同名，它提供了对成员变量进行初始化的方法，使得在声明对象时能自动地初始化对象。        </p>
+</li>
+<li><p>析构函数：也是特殊的类成员函数，它没有返回类型，没有参数，不能随意调用，也没有重载，只有在类对象的生命期结束的时候，由系统自动调用，用来在系统释放对象前做一些清理工作，如利用delete运算符释放临时分配的内存、清零某些内存单元等。定义析构函数使用 <code>~</code> 符号加类名(逻辑非运算符)，表示它为逆构造函数，它不能带任何参数</p>
+</li>
+<li><p>拷贝函数: 只有单个形参，而且该参数是对本类型对象的引用（常用<code>const</code>修饰）  </p>
+</li>
+<li><p>赋值函数 定义形式： <code>class_name &amp;operator=(const class_name);</code>     </p>
+</li>
+</ul>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line"> * 例子</div><div class="line"> */</div><div class="line"> <span class="keyword">class</span> LPString</div><div class="line"> &#123;</div><div class="line"> <span class="keyword">public</span>:</div><div class="line">     LPString(<span class="keyword">const</span> <span class="keyword">char</span>* str = <span class="literal">NULL</span>); <span class="comment">// 普通构造函数</span></div><div class="line"></div><div class="line">     LPString(<span class="keyword">const</span> LPString &amp; other); <span class="comment">// 拷贝构造函数</span></div><div class="line"></div><div class="line">     <span class="keyword">virtual</span> ~ LPString(); <span class="comment">// 析构函数</span></div><div class="line"></div><div class="line">     LPString&amp; <span class="keyword">operator</span>=(<span class="keyword">const</span> LPString &amp; other); <span class="comment">// 赋值函数</span></div><div class="line"></div><div class="line"> <span class="keyword">public</span>:</div><div class="line">     <span class="keyword">const</span> <span class="keyword">size_t</span> m_nLength; <span class="comment">//需在构造函数初始化列表中赋值</span></div><div class="line">     <span class="keyword">static</span> <span class="keyword">size_t</span> <span class="keyword">const</span> max;</div><div class="line">     <span class="keyword">char</span> * m_pData;</div><div class="line"> &#125;;</div></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> <span class="keyword">unsigned</span> <span class="keyword">int</span> nStringLen = <span class="number">30</span>;</div><div class="line"></div><div class="line"><span class="keyword">size_t</span> <span class="keyword">const</span> LPString::number = <span class="number">10</span>;</div><div class="line"></div><div class="line">LPString::LPString(<span class="keyword">const</span> <span class="keyword">char</span>* str): m_nLength(nStringLen)</div><div class="line">&#123;</div><div class="line">    <span class="keyword">if</span> (str)</div><div class="line">    &#123;</div><div class="line">        <span class="keyword">size_t</span> len = <span class="built_in">strlen</span>(str);</div><div class="line">        m_pData = <span class="keyword">new</span> <span class="keyword">char</span>[len + <span class="number">1</span>];</div><div class="line">        <span class="built_in">strncpy</span>(m_pData, str, len);</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">else</span></div><div class="line">    &#123;</div><div class="line">        m_pData = <span class="keyword">new</span> <span class="keyword">char</span>(<span class="number">1</span>);</div><div class="line">        m_pData[<span class="number">0</span>] = <span class="string">'\0'</span>;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="built_in">printf</span>(<span class="string">"构造函数\n"</span>);</div><div class="line">&#125;</div><div class="line"></div><div class="line">LPString::LPString(<span class="keyword">const</span> LPString &amp; other): m_nLength(nStringLen)</div><div class="line">&#123;</div><div class="line">    <span class="keyword">size_t</span> len = <span class="built_in">strlen</span>(other.m_pData);</div><div class="line"></div><div class="line">    m_pData = <span class="keyword">new</span> <span class="keyword">char</span>[len + <span class="number">1</span>];</div><div class="line"></div><div class="line">    <span class="built_in">strcpy</span>(m_pData, other.m_pData);</div><div class="line"></div><div class="line">    <span class="built_in">printf</span>(<span class="string">"拷贝函数\n"</span>);</div><div class="line">&#125;</div><div class="line"></div><div class="line">LPString::~LPString()</div><div class="line">&#123;</div><div class="line">    <span class="keyword">delete</span> [] m_pData;</div><div class="line"></div><div class="line">    <span class="built_in">printf</span>(<span class="string">"析构函数\n"</span>);</div><div class="line">&#125;</div><div class="line"></div><div class="line">LPString&amp; LPString::<span class="keyword">operator</span>=(<span class="keyword">const</span> LPString &amp; other)</div><div class="line">&#123;</div><div class="line">    <span class="built_in">printf</span>(<span class="string">"赋值函数\n"</span>);</div><div class="line"></div><div class="line">    <span class="keyword">if</span> (<span class="keyword">this</span> != &amp;other)</div><div class="line">    &#123;</div><div class="line">        <span class="keyword">delete</span> [] m_pData;</div><div class="line"></div><div class="line">        <span class="keyword">size_t</span> len = <span class="built_in">strlen</span>(other.m_pData);</div><div class="line"></div><div class="line">        m_pData = <span class="keyword">new</span> <span class="keyword">char</span>(len + <span class="number">1</span>);</div><div class="line"></div><div class="line">        <span class="built_in">strcpy</span>(m_pData, other.m_pData);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="keyword">return</span> *<span class="keyword">this</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="引用和指针区别"><a href="#引用和指针区别" class="headerlink" title="引用和指针区别"></a>引用和指针区别</h3><p><strong>引用和指针区别：</strong>     </p>
+<ol>
+<li>引用不能为 <code>NULL</code>  , 总是指向一个对象；     </li>
+<li>引用在创建时必须初始化，指针可以在任何时候初始化；    </li>
+<li>引用被初始化后，就不能改变引用的关系，指针则可以随时改变所指的对象；   </li>
+</ol>
+<h3 id="static详解"><a href="#static详解" class="headerlink" title="static详解"></a>static详解</h3><p><strong>static详解</strong></p>
+<ol>
+<li><strong><em>c语言中static</em></strong><ul>
+<li><em>static局部变量</em>：静态局部变量在函数内定义，它的生存期为整个程序生命周期，但是其作用域仍与自动变量相同，只能在定义该变量的函数内使用该变量。退出该函数后，尽管该变量还继续存在，但不能使用它；对基本类型的静态局部变量若在声明时未赋以初值，则系统自动赋予0值。而对自动变量不赋初值，则其值是不定的。</li>
+<li><em>static全局变量</em>：静态全局变量只在定义该变量的源文件内有效，可以避免在其它源文件中引起错误</li>
+<li><em>static函数</em>：定义 <code>static void function(void){};</code>，好处：对函数的作用域仅局限于本文件，不担心与其他文件的函数同名。</li>
+</ul>
+</li>
+<li><strong><em>c++语言中static</em></strong><ul>
+<li><em>static数据成员</em>：在类内数据成员的声明前加上关键字static，该数据成员就是类内的静态数据成员</li>
+<li><em>static成员函数</em>：在类体外，静态函数的定义前不能加关键字static；静态成员函数不能访问非静态成员函数和非静态数据成员，只能访问静态的；非静态成员函数可以任意地访问静态成员函数和静态数据成员；static成员之间可以相互访问，包括static成员函数访问static数据成员和访问static成员函数；   <figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">class</span> CTestStatic</div><div class="line">&#123;</div><div class="line"><span class="keyword">public</span>:   </div><div class="line">    <span class="function"><span class="keyword">int</span> <span class="title">getSum</span><span class="params">()</span></span>&#123;<span class="keyword">return</span> max;&#125;</div><div class="line">    <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">func</span><span class="params">()</span></span>&#123;++max;&#125;        </div><div class="line"><span class="keyword">public</span>:</div><div class="line">    <span class="keyword">static</span> <span class="keyword">int</span> max;    </div><div class="line">&#125;;    </div><div class="line"><span class="comment">//在cpp中</span></div><div class="line"><span class="comment">//＜数据类型＞ ＜类名＞::＜静态数据成员名＞=＜值＞;</span></div><div class="line"><span class="keyword">int</span> CTestStatic::max = <span class="number">0</span>;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="const详解"><a href="#const详解" class="headerlink" title="const详解"></a>const详解</h3><p><strong>const详解：</strong></p>
+<ol>
+<li><p>定义常量     </p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> length = <span class="number">200</span>;</div></pre></td></tr></table></figure>
+</li>
+<li><p>指针使用const    </p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//1.指针本身是常量不可变</span></div><div class="line"><span class="keyword">char</span> * <span class="keyword">const</span> pContent;</div><div class="line"><span class="comment">//2.指针所指向的内容是常量不可变</span></div><div class="line"><span class="keyword">const</span> <span class="keyword">char</span> * pContent;</div><div class="line"><span class="comment">//3.两者都不可变   </span></div><div class="line"><span class="keyword">const</span> <span class="keyword">char</span> * <span class="keyword">const</span> pContent;</div></pre></td></tr></table></figure>
+</li>
+<li><p>函数使用const    </p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//1.const修饰函数参数</span></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">function</span><span class="params">(<span class="keyword">const</span> <span class="keyword">char</span> * Var)</span></span>;</div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">function</span><span class="params">(<span class="keyword">const</span> Class &amp; Var)</span></span>;</div><div class="line"><span class="comment">//2.const 修饰函数返回值  </span></div><div class="line"><span class="function"><span class="keyword">const</span> <span class="keyword">int</span> * <span class="title">function</span><span class="params">()</span></span>;</div><div class="line"><span class="function"><span class="keyword">int</span> * <span class="keyword">const</span> <span class="title">function</span><span class="params">()</span></span>;</div></pre></td></tr></table></figure>
+</li>
+<li><p>类中使用const     </p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//1.const修饰成员变量   </span></div><div class="line"><span class="keyword">class</span> A     </div><div class="line">&#123;   </div><div class="line"><span class="keyword">public</span>:     </div><div class="line">    <span class="keyword">const</span> <span class="keyword">int</span> nValue;</div><div class="line">    A(<span class="keyword">int</span> x): nValue(x) &#123; &#125;;  <span class="comment">//只能在初始化列表中赋值</span></div><div class="line">&#125;;  </div><div class="line"><span class="comment">//2.const修饰成员函数</span></div><div class="line"><span class="keyword">class</span> A     </div><div class="line">&#123;</div><div class="line"><span class="keyword">public</span>:</div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">function</span><span class="params">()</span> <span class="keyword">const</span></span>; <span class="comment">//常成员函数, 它不改变对象的成员变量; 也不能调用类中任何非const成员函数。</span></div><div class="line">&#125;;</div><div class="line"><span class="comment">//3.const修饰类对象/对象指针/对象引用    </span></div><div class="line"><span class="comment">//a. const修饰类对象表示该对象为常量对象，其中的任何成员都不能被修改。对于对象指针和对象引用也是一样。        </span></div><div class="line"><span class="comment">//b. const修饰的对象，该对象的任何非const成员函数都不能被调用，因为任何非const成员函数会有修改成员变量的企图。         </span></div><div class="line"><span class="keyword">class</span> A</div><div class="line">&#123;</div><div class="line"><span class="keyword">public</span>:</div><div class="line">	<span class="function"><span class="keyword">void</span> <span class="title">func1</span><span class="params">()</span></span>;</div><div class="line">	<span class="function"><span class="keyword">void</span> <span class="title">func2</span><span class="params">()</span> <span class="keyword">const</span></span>;</div><div class="line">&#125;;      </div><div class="line"><span class="keyword">const</span> A obj;</div><div class="line">obj.func1();<span class="comment">//错误</span></div><div class="line">obj.func2();<span class="comment">//正确</span></div><div class="line"><span class="keyword">const</span> A *pobj;</div><div class="line">pobj-&gt;func1();<span class="comment">//错误</span></div><div class="line">pobj-&gt;func2();<span class="comment">//正确</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>将Const类型转化为非Const类型的方法<br><strong><em>const_cast<type> (expression), const_cast只能用来添加或删除const特性，不能作他用</type></em></strong>    </p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">const</span> LPString <span class="title">str</span><span class="params">(<span class="string">"hello"</span>)</span></span>;</div><div class="line"><span class="keyword">const</span> LPString &amp;val = str;</div><div class="line">LPString &amp;ref=<span class="keyword">const_cast</span>&lt;LPString &amp;&gt;(val);<span class="comment">//删除const特性</span></div><div class="line"><span class="keyword">const</span> LPString &amp;cref=<span class="keyword">const_cast</span>&lt;<span class="keyword">const</span> LPString &amp;&gt;(ref);<span class="comment">//添加const特性</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>使用const的一些建议     </p>
+<ul>
+<li>要大胆的使用const，这将给你带来无尽的益处;</li>
+<li>任何不会修改数据成员的函数都应该声明为 <code>const</code> 类型;</li>
+<li>在参数中使用const应该使用引用或指针，而不是一般的对象实例.</li>
+</ul>
+</li>
+</ol>
+<h3 id="类作用域"><a href="#类作用域" class="headerlink" title="类作用域"></a>类作用域</h3><p>在类外部访问类中的名称时，可以使用类作用域操作符，形如<code>MyClass::name</code>的调用通常存在三种：静态数据成员、静态成员函数和嵌套类型：   </p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">struct</span> MyClass</div><div class="line">&#123;</div><div class="line">    <span class="keyword">static</span> <span class="keyword">int</span> A;</div><div class="line">    <span class="function"><span class="keyword">static</span> <span class="keyword">int</span> <span class="title">B</span><span class="params">()</span></span>;</div><div class="line">    <span class="keyword">typedef</span> <span class="keyword">int</span> C;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<p><code>MyClass::A</code>, <code>MyClass::B</code>, <code>MyClass::C</code> 分别对应着上面三种。   </p>
+<h3 id="临时对象产生和运用"><a href="#临时对象产生和运用" class="headerlink" title="临时对象产生和运用"></a>临时对象产生和运用</h3><p><strong>制造临时对象的方式</strong> 是在类别名称之后直接加一对小括号，并可指定初值，其意义相当于调用响应的构造函数且不指定对象名称，例如：<code>Shape(3,5)</code>, <code>int(8)</code>, <code>plus&lt;int&gt;()</code>;  STL常将此技巧由于仿函数与算法的搭配上。  <em>参考《STL源码剖析》</em><br><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">int</span> sum = accumulate(v.begin(), v.end(), <span class="number">0</span>, plus&lt;<span class="keyword">int</span>&gt;());</div></pre></td></tr></table></figure></p>
+<h3 id="函数对象-仿函数"><a href="#函数对象-仿函数" class="headerlink" title="函数对象(仿函数)"></a>函数对象(仿函数)</h3><p><strong>1.函数对象(仿函数)概述</strong><br>在STL的六大组件中，仿函数可说是体积最小、观念最简单、实现最容易的一个，但小兵也能立大功——他扮演一种“策略”角色，可以让STL算法具有更加灵活的“演出”。   </p>
+<p>在STL的历史上，仿函数(functor)是早期的命名，C++标准规格定下来后采用了新的名称——函数对象(function object)。就实际意义而言，函数对象的称谓更加贴切：一种具有函数特质的对象。函数对象对调用者而言可以向函数调用一样地被调用，而对被调用者而言则是以对象所定义的函数调用操作符(function call operator)。  </p>
+<p>在C++中，函数调用操作符是指左右小括弧 <code>()</code> ，该操作符是可以重载的。许多 STL 算法都提供了两个版本，一个用于一般情况（例如排序时使用 <code>operator&lt;</code> 以递增方式排列），一个用于特殊情况（例如排序时按照使用者自定义的大小关系进行排序）。这有点类似于C语言中的函数指针，但函数指针无法满足STL对抽象性的要求，也不能和STL其他组件（如配接器adaptor）搭配，产生更灵活的变化。    </p>
+<p><strong>2.可适配(Adaptable)的关键</strong><br>STL算法非常灵活的一个关键因素之一在于STL仿函数的可配接性(adaptability)，即函数可以被配接器修饰，彼此相积木一样地串接。为了拥有配接能力，每一个仿函数必须定义自己的相应型别(associate types)，就像迭代器如果要融入整个STL大家庭，也必须依照规定定义自己的5个相应型别一样。这样做是为了让配接器能够获得函数的一些特性。相应型别都只是一些 typedef，所有必要操作在编译期就就全部完成了，对程序的执行效率没有任何影响，不带来任何额外负担。    </p>
+<p>仿函数相应型别主要用来表示函数的参数型别和返回值型别，为了方便，<code>stl_function.h</code> 中定义了两个基类，分别是 <code>unary_function</code> 和 <code>binary_function</code>，分别表示一元函数和二元函数，其中都是一些型别的定义，仿函数只需要继承其中一个类，就可以拥有配接能力了。     </p>
+<p><strong>2.1 unary_function</strong><br>该类用来封装一元函数的参数型别和返回值型别，其定义非常简单：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">template &lt;class _Arg, class _Result&gt;  </div><div class="line">struct unary_function &#123;</div><div class="line">  typedef _Arg argument_type; //参数型别  </div><div class="line">  typedef _Result result_type; //返回值型别   </div><div class="line">&#125;;</div></pre></td></tr></table></figure></p>
+<p>仿函数可以继承该类，这样用户就可以取得该仿函数的参数型别，并以相同方法获得其返回值：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">template &lt;class _Tp&gt;</div><div class="line">struct negate : public unary_function&lt;_Tp,_Tp&gt; &#123; // 仿函数 negate 继承 unary_function</div><div class="line">  _Tp operator()(const _Tp&amp; __x) const &#123; return -__x; &#125;</div><div class="line">&#125;;</div><div class="line">template &lt;class _Predicate&gt;</div><div class="line">class unary_negate : public unary_function&lt;typename _Predicate::argument_type, bool&gt; &#123;</div><div class="line">protected:</div><div class="line">  _Predicate _M_pred;</div><div class="line">public:</div><div class="line">  explicit unary_negate(const _Predicate&amp; __x) : _M_pred(__x) &#123;&#125;</div><div class="line">  bool operator()(const typename _Predicate::argument_type&amp; __x) const &#123; // 获取参数的型别argument_type</div><div class="line">    return !_M_pred(__x);</div><div class="line">  &#125;</div><div class="line">&#125;;</div></pre></td></tr></table></figure></p>
+<p><strong>2.2 binary_function</strong><br>该类用来封装二元函数的参数一、参数二型别和返回值类型，仅比一元函数多了一个输入参数型别的定义而已，其定义如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">template &lt;class _Arg1, class _Arg2, class _Result&gt;</div><div class="line">struct binary_function &#123;</div><div class="line">  typedef _Arg1 first_argument_type; // 参数一型别</div><div class="line">  typedef _Arg2 second_argument_type; // 参数二型别</div><div class="line">  typedef _Result result_type; // 返回值型别</div><div class="line">&#125;;</div><div class="line">template &lt;class _Tp&gt;</div><div class="line">struct plus : public binary_function&lt;_Tp,_Tp,_Tp&gt; &#123; // 仿函数 plus 继承 binary_function</div><div class="line">  _Tp operator()(const _Tp&amp; __x, const _Tp&amp; __y) const &#123; return __x + __y; &#125;</div><div class="line">&#125;;</div></pre></td></tr></table></figure></p>
+<p><strong>3. STL内建仿函数</strong><br>STL 仿函数的分类，若以操作数的个数划分，可以分为一元和二元仿函数，若以功能划分，可以分为算术运算、关系运算、逻辑运算三大类，任何应用程序欲使用STL内建的仿函数，需要包含 <code>&lt;functional&gt;</code> 头文件，而这些仿函数的实际实现都在 <code>stl_function.h</code> 中。<em>参考</em> <a href="http://en.cppreference.com/w/cpp/header/functional" target="_blank" rel="external">functional</a></p>
+<h3 id="std-nothrow-new-与-普通-new"><a href="#std-nothrow-new-与-普通-new" class="headerlink" title="std::nothrow new 与 普通 new"></a><code>std::nothrow new</code> 与 普通 <code>new</code></h3><p><code>Test-for-NULL</code> 代码形式<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">char</span> * buffer = <span class="keyword">new</span>(<span class="built_in">std</span>::nothrow) <span class="keyword">char</span>[<span class="number">256</span>];</div><div class="line"><span class="keyword">if</span>(<span class="literal">NULL</span> == buffer)</div><div class="line">&#123;</div><div class="line">    <span class="comment">// <span class="doctag">TODO:</span> error process</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>在C++里，如果 <code>new</code> 分配内存失败，默认是抛出异常。  所以，如果分配成功，<code>NULL == buffer</code> 就绝对不会成立；而如果分配失败了，也不会执行 <code>if(NULL == buffer)</code> ，因为分配失败时，<code>new</code> 就会抛出异常并跳过后面的代码。<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">try</span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">char</span> * buffer = <span class="keyword">new</span> <span class="keyword">char</span>[<span class="number">256</span>];</div><div class="line">&#125;</div><div class="line"><span class="keyword">catch</span>(<span class="keyword">const</span> bad_alloc&amp; e)</div><div class="line">&#123;</div><div class="line">    <span class="comment">// <span class="doctag">TODO:</span> error process</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p><em>参考资料:</em> <a href="http://book.51cto.com/art/201202/317767.htm" target="_blank" rel="external">new内存失败后的正确处理</a></p>
 
           
         
@@ -723,6 +1417,115 @@ ctrl-alt-r    markdown-toc:delete -->
 
 
     
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/Hexo/" itemprop="url">
+                  Hexo
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-06-25T00:00:00+08:00" content="2016-06-25">
+              2016-06-25
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/Hexo/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="Hexo/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
   </section>
 
   
@@ -764,24 +1567,24 @@ ctrl-alt-r    markdown-toc:delete -->
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">3</span>
+              <span class="site-state-item-count">7</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
 
           
             <div class="site-state-item site-state-categories">
-              
-                <span class="site-state-item-count">1</span>
+              <a href="/categories">
+                <span class="site-state-item-count">2</span>
                 <span class="site-state-item-name">分类</span>
-              
+              </a>
             </div>
           
 
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-count">7</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
