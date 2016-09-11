@@ -1,0 +1,1094 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="gcc," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="总览总览(SYNOPSIS)12gcc [options] filename ...g++ [options] filename ...
+总体选项(Overall Option)
+
+
+选项
+解释
+
+
+
+
+-c
+编译或汇编源文件,但是不作连接.编译器输出对应于源文件的目标文件.
+
+
+-o
+指定输出文件，如果没有使用 -o 选项,默认的输出结果是:可执行文件为 a.out
+
+
+
+调试选项(DEBUGG">
+<meta property="og:type" content="article">
+<meta property="og:title" content="GCC编译器选项解析">
+<meta property="og:url" content="http://tworeed.me/2016/08/08/GCC编译器选项解析/index.html">
+<meta property="og:site_name" content="俩芦苇">
+<meta property="og:description" content="总览总览(SYNOPSIS)12gcc [options] filename ...g++ [options] filename ...
+总体选项(Overall Option)
+
+
+选项
+解释
+
+
+
+
+-c
+编译或汇编源文件,但是不作连接.编译器输出对应于源文件的目标文件.
+
+
+-o
+指定输出文件，如果没有使用 -o 选项,默认的输出结果是:可执行文件为 a.out
+
+
+
+调试选项(DEBUGG">
+<meta property="og:updated_time" content="2016-09-11T13:47:34.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="GCC编译器选项解析">
+<meta name="twitter:description" content="总览总览(SYNOPSIS)12gcc [options] filename ...g++ [options] filename ...
+总体选项(Overall Option)
+
+
+选项
+解释
+
+
+
+
+-c
+编译或汇编源文件,但是不作连接.编译器输出对应于源文件的目标文件.
+
+
+-o
+指定输出文件，如果没有使用 -o 选项,默认的输出结果是:可执行文件为 a.out
+
+
+
+调试选项(DEBUGG">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://tworeed.me/2016/08/08/GCC编译器选项解析/"/>
+
+  <title> GCC编译器选项解析 | 俩芦苇 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?bcab25c89485e8ee0cb484891ca65cc0";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">俩芦苇</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">有些人，不用太早遇见。</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-commonweal">
+          <a href="/404.html" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />
+            
+            公益404
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup">
+ <span class="search-icon fa fa-search"></span>
+ <input type="text" id="local-search-input">
+ <div id="local-search-result"></div>
+ <span class="popup-btn-close">close</span>
+</div>
+
+
+    </div>
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                GCC编译器选项解析
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-08-08T00:00:00+08:00" content="2016-08-08">
+              2016-08-08
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/08/08/GCC编译器选项解析/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/08/08/GCC编译器选项解析/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="总览"><a href="#总览" class="headerlink" title="总览"></a>总览</h3><p>总览(SYNOPSIS)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">gcc [options] filename ...</div><div class="line">g++ [options] filename ...</div></pre></td></tr></table></figure></p>
+<h3 id="总体选项-Overall-Option"><a href="#总体选项-Overall-Option" class="headerlink" title="总体选项(Overall Option)"></a>总体选项(Overall Option)</h3><table>
+<thead>
+<tr>
+<th>选项</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-c</td>
+<td>编译或汇编源文件,但是不作连接.编译器输出对应于源文件的目标文件.</td>
+</tr>
+<tr>
+<td>-o</td>
+<td>指定输出文件，如果没有使用 <code>-o</code> 选项,默认的输出结果是:可执行文件为 <code>a.out</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="调试选项-DEBUGGING-OPTION"><a href="#调试选项-DEBUGGING-OPTION" class="headerlink" title="调试选项(DEBUGGING OPTION)"></a>调试选项(DEBUGGING OPTION)</h3><table>
+<thead>
+<tr>
+<th>选项</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-g</td>
+<td>以操作系统的本地格式(stabs, COFF, XCOFF,或DWARF)，产生调试信息，GDB能够使用这些调试信息</td>
+</tr>
+<tr>
+<td>-g<em>level</em></td>
+<td>请求生成调试信息,同时用level指出需要多少信息，默认的level值是2；<br> level1: 输出最少量的信息,仅够在不打算调试的程序段内backtrace.包括函数和外部变量的描述,但是 没有局部变量和行号信息；<br>Level3: 包含更多的信息,如程序中出现的所有宏定义.当使用`-g3’选项的时候,某些调试器支持 宏扩展</td>
+</tr>
+</tbody>
+</table>
+<h3 id="预处理器选项-Preprocessor-Option"><a href="#预处理器选项-Preprocessor-Option" class="headerlink" title="预处理器选项(Preprocessor Option)"></a>预处理器选项(Preprocessor Option)</h3><table>
+<thead>
+<tr>
+<th>选项</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-Dmacro</td>
+<td>x</td>
+</tr>
+<tr>
+<td>-Dmacro=defn</td>
+<td>定义宏macro的内容为defn</td>
+</tr>
+<tr>
+<td>-Umacro</td>
+<td>取消宏macro，<code>-U</code> 选项在所有的 <code>-D</code> 选项之后处理</td>
+</tr>
+</tbody>
+</table>
+<h3 id="连接器选项-LINKER-OPTION"><a href="#连接器选项-LINKER-OPTION" class="headerlink" title="连接器选项(LINKER OPTION)"></a>连接器选项(LINKER OPTION)</h3><table>
+<thead>
+<tr>
+<th>选项</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-l<em>library</em></td>
+<td>连接名为library的库文件</td>
+</tr>
+<tr>
+<td>-shared</td>
+<td>生成一个共享目标文件，常搭配 <code>-fPIC</code> 使用</td>
+</tr>
+<tr>
+<td>-Wl,option</td>
+<td>把选项option传递给连接器.如果option中含有逗号,就在逗号处分割成多个选项.</td>
+</tr>
+<tr>
+<td>-symbolic</td>
+<td>建立共享目标文件的时候,把引用绑定到全局符号上</td>
+</tr>
+</tbody>
+</table>
+<h3 id="目录选项-DIRECTORY-OPTION"><a href="#目录选项-DIRECTORY-OPTION" class="headerlink" title="目录选项(DIRECTORY OPTION)"></a>目录选项(DIRECTORY OPTION)</h3><table>
+<thead>
+<tr>
+<th>选项</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-I<em>dir</em></td>
+<td>在<strong>头文件</strong>搜索路径列表中添加 <code>dir</code> 目录</td>
+</tr>
+<tr>
+<td>-L<em>dir</em></td>
+<td>在 <code>-l</code> 选项<strong>库文件</strong>搜索路径列表中添加 <code>dir</code> 目录</td>
+</tr>
+</tbody>
+</table>
+<h3 id="警告选项-WARNING-OPTION"><a href="#警告选项-WARNING-OPTION" class="headerlink" title="警告选项(WARNING OPTION)"></a>警告选项(WARNING OPTION)</h3><table>
+<thead>
+<tr>
+<th>选项</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-w</td>
+<td>禁止所有警告信息(不建议使用)</td>
+</tr>
+<tr>
+<td>-Wall</td>
+<td>开启大部分警告提示(建议使用)</td>
+</tr>
+<tr>
+<td>-Werror</td>
+<td>视警告为错误;出现任何警告即放弃编译</td>
+</tr>
+</tbody>
+</table>
+<h3 id="优化选项-OPTIMIZATION-OPTION"><a href="#优化选项-OPTIMIZATION-OPTION" class="headerlink" title="优化选项(OPTIMIZATION OPTION)"></a>优化选项(OPTIMIZATION OPTION)</h3><table>
+<thead>
+<tr>
+<th>选项</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-O0</td>
+<td>不优化</td>
+</tr>
+<tr>
+<td>-O1</td>
+<td>优化.对于大函数,优化编译占用稍微多的时间和相当大的内存.</td>
+</tr>
+<tr>
+<td>-O2</td>
+<td>多优化一些.除了涉及空间和速度交换的优化选项,执行几乎所有的优化工作.例如不进行循环展开(loop unrolling)和函数内嵌(inlining).<br>和-O选项比较,这个选项既增加了编译时间,也提高了生成代码的 运行效果.</td>
+</tr>
+<tr>
+<td>-O3</td>
+<td>优化的更多.除了打开-O2所做的一切,它还打开了-finline-functions选项</td>
+</tr>
+<tr>
+<td>-ffloat-store</td>
+<td>不要在寄存器中存放浮点变量.这样可以防止某些机器上不希望的过高精度,<br>如68000的浮点寄存器(来自 68881)保存的精度超过了double应该具有的精度. <br>对于大多数程序,过高精度只有好处.但是有些程序严格依赖于IEEE浮点数的定义.对这样的程序可以使用 <code>-ffloat-store</code>选项.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="机器相关选项-MACHINE-DEPENDENT-OPTION"><a href="#机器相关选项-MACHINE-DEPENDENT-OPTION" class="headerlink" title="机器相关选项(MACHINE DEPENDENT OPTION)"></a>机器相关选项(MACHINE DEPENDENT OPTION)</h3><table>
+<thead>
+<tr>
+<th>选项</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-mhard-float</td>
+<td>输出包含浮点指令的目标码.这是缺省选项</td>
+</tr>
+<tr>
+<td>-msoft-float</td>
+<td>警告:没有为SPARC提供GNU浮点库.一般说来使用该机型本地C编译器的相应部件,<br>但是不能直接用于交叉编译.你必须自己安排,提供用于交叉编译的库函数. <br><code>-msoft-float</code> 改变了输出文件中的调用约定;因此只有用这个选项编译整个程序才有意义.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="代码生成选项-CODE-GENERATION-OPTION"><a href="#代码生成选项-CODE-GENERATION-OPTION" class="headerlink" title="代码生成选项(CODE GENERATION OPTION)"></a>代码生成选项(CODE GENERATION OPTION)</h3><table>
+<thead>
+<tr>
+<th>选项</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-fpic</td>
+<td>如果支持这种目标机,编译器就生成位置无关目标码.适用于共享库(shared library).</td>
+</tr>
+<tr>
+<td>-fPIC</td>
+<td>如果支持这种目标机,编译器就输出位置无关目标码.<br>适用于动态连接(dynamic linking),即使分支需要大范围 转移.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="语言选项-LANGUAGE-OPTIONS"><a href="#语言选项-LANGUAGE-OPTIONS" class="headerlink" title="语言选项(LANGUAGE OPTIONS)"></a>语言选项(LANGUAGE OPTIONS)</h3><table>
+<thead>
+<tr>
+<th>选项</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-ansi</td>
+<td>支持符合ANSI标准的C程序</td>
+</tr>
+<tr>
+<td>-std=c99</td>
+<td>C99标准</td>
+</tr>
+<tr>
+<td>-std=c++11</td>
+<td>支持c++11</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<blockquote>
+<p><strong><em>参考：</em></strong><br><a href="http://www.shanghai.ws/gnu/gcc_1.htm" target="_blank" rel="external">GNU GCC 手册</a><br><a href="http://blog.csdn.net/lee244868149/article/details/38754153" target="_blank" rel="external">gcc常用编译选项汇总</a><br><a href="http://www.cnblogs.com/azraelly/archive/2012/07/07/2580839.html" target="_blank" rel="external">GCC编译详解</a></p>
+</blockquote>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/gcc/" rel="tag">#gcc</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/08/03/c++相关概念/" rel="next" title="c++相关概念">
+                <i class="fa fa-chevron-left"></i> c++相关概念
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/09/10/grep命令/" rel="prev" title="grep命令">
+                grep命令 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/08/08/GCC编译器选项解析/"
+           data-title="GCC编译器选项解析" data-url="http://tworeed.me/2016/08/08/GCC编译器选项解析/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/u.jpg"
+               alt="twoReed" />
+          <p class="site-author-name" itemprop="name">twoReed</p>
+          <p class="site-description motion-element" itemprop="description">点滴积累，相信重复的力量。</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">7</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/liangsp" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/liangshipingblog" target="_blank" title="微博">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  微博
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://blog.cnbluebox.com/" title="纪念" target="_blank">纪念</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#总览"><span class="nav-number">1.</span> <span class="nav-text">总览</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#总体选项-Overall-Option"><span class="nav-number">2.</span> <span class="nav-text">总体选项(Overall Option)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#调试选项-DEBUGGING-OPTION"><span class="nav-number">3.</span> <span class="nav-text">调试选项(DEBUGGING OPTION)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#预处理器选项-Preprocessor-Option"><span class="nav-number">4.</span> <span class="nav-text">预处理器选项(Preprocessor Option)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#连接器选项-LINKER-OPTION"><span class="nav-number">5.</span> <span class="nav-text">连接器选项(LINKER OPTION)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#目录选项-DIRECTORY-OPTION"><span class="nav-number">6.</span> <span class="nav-text">目录选项(DIRECTORY OPTION)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#警告选项-WARNING-OPTION"><span class="nav-number">7.</span> <span class="nav-text">警告选项(WARNING OPTION)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#优化选项-OPTIMIZATION-OPTION"><span class="nav-number">8.</span> <span class="nav-text">优化选项(OPTIMIZATION OPTION)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#机器相关选项-MACHINE-DEPENDENT-OPTION"><span class="nav-number">9.</span> <span class="nav-text">机器相关选项(MACHINE DEPENDENT OPTION)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代码生成选项-CODE-GENERATION-OPTION"><span class="nav-number">10.</span> <span class="nav-text">代码生成选项(CODE GENERATION OPTION)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#语言选项-LANGUAGE-OPTIONS"><span class="nav-number">11.</span> <span class="nav-text">语言选项(LANGUAGE OPTIONS)</span></a></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">twoReed</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.1"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"tworeed"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+    <script src="/vendors/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+  
+  
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length == 0) {
+       search_path = "search.xml";
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    function proceedsearch() {
+      $("body").append('<div class="popoverlay">').css('overflow', 'hidden');
+      $('.popup').toggle();
+
+    }
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+    'use strict';
+    $.ajax({
+        url: path,
+        dataType: "xml",
+        async: true,
+        success: function( xmlResponse ) {
+            // get the contents from search data
+            isfetched = true;
+            $('.popup').detach().appendTo('.header-inner');
+            var datas = $( "entry", xmlResponse ).map(function() {
+                return {
+                    title: $( "title", this ).text(),
+                    content: $("content",this).text(),
+                    url: $( "url" , this).text()
+                };
+            }).get();
+            var $input = document.getElementById(search_id);
+            var $resultContent = document.getElementById(content_id);
+            $input.addEventListener('input', function(){
+                var matchcounts = 0;
+                var str='<ul class=\"search-result-list\">';
+                var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                $resultContent.innerHTML = "";
+                if (this.value.trim().length > 1) {
+                // perform local searching
+                datas.forEach(function(data) {
+                    var isMatch = true;
+                    var content_index = [];
+                    var data_title = data.title.trim().toLowerCase();
+                    var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
+                    var data_url = data.url;
+                    var index_title = -1;
+                    var index_content = -1;
+                    var first_occur = -1;
+                    // only match artiles with not empty titles and contents
+                    if(data_title != '' && data_content != '') {
+                        keywords.forEach(function(keyword, i) {
+                            index_title = data_title.indexOf(keyword);
+                            index_content = data_content.indexOf(keyword);
+                            if( index_title < 0 && index_content < 0 ){
+                                isMatch = false;
+                            } else {
+                                if (index_content < 0) {
+                                    index_content = 0;
+                                }
+                                if (i == 0) {
+                                    first_occur = index_content;
+                                }
+                            }
+                        });
+                    }
+                    // show search results
+                    if (isMatch) {
+                        matchcounts += 1;
+                        str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
+                        var content = data.content.trim().replace(/<[^>]+>/g,"");
+                        if (first_occur >= 0) {
+                            // cut out 100 characters
+                            var start = first_occur - 20;
+                            var end = first_occur + 80;
+                            if(start < 0){
+                                start = 0;
+                            }
+                            if(start == 0){
+                                end = 50;
+                            }
+                            if(end > content.length){
+                                end = content.length;
+                            }
+                            var match_content = content.substring(start, end);
+                            // highlight all keywords
+                            keywords.forEach(function(keyword){
+                                var regS = new RegExp(keyword, "gi");
+                                match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
+                            });
+
+                            str += "<p class=\"search-result\">" + match_content +"...</p>"
+                        }
+                        str += "</li>";
+                    }
+                })};
+                str += "</ul>";
+                if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
+                if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
+                $resultContent.innerHTML = str;
+            });
+            proceedsearch();
+        }
+    });}
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched == false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+
+    });
+
+    $('.popup-btn-close').click(function(e){
+      $('.popup').hide();
+      $(".popoverlay").remove();
+      $('body').css('overflow', '');
+    });
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+  </script>
+
+
+  
+
+  
+
+  
+
+</body>
+</html>
