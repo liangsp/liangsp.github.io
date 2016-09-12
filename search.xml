@@ -51,10 +51,9 @@
 <h3 id="解压"><a href="#解压" class="headerlink" title="解压"></a>解压</h3><p>1、<code>7z x archive_name</code> 解压到当前目录<br>2、<code>7z x archive_name -oDir</code> 解压到指定目录    </p>
 <h2 id="tar命令"><a href="#tar命令" class="headerlink" title="tar命令"></a>tar命令</h2><h3 id="压缩-1"><a href="#压缩-1" class="headerlink" title="压缩"></a>压缩</h3><p><code>tar -czvf ***.tar.gz</code><br><code>tar -cjvf ***.tar.bz2</code></p>
 <h3 id="解压缩"><a href="#解压缩" class="headerlink" title="解压缩"></a>解压缩</h3><p><code>tar -xzvf ***.tar.gz</code><br><code>tar -xjvf ***.tar.bz2</code>   </p>
-<p>参数：</p>
-<p>-c：建立一个压缩档案的参数指令(create的意思)<br>-x：解开一个压缩档案的参数指令<br>-t：查看tarfile 里面的档案    </p>
-<p>特别注意，在参数的下达中， c/x/t 仅能存在一个, 不可同时存在.</p>
-<p>-z：是否同时具有 gzip 的属性？亦即是否需要用 gzip 压缩？<br>-j：是否同时具有 bzip2 的属性？亦即是否需要用 bzip2 压缩？<br>-v：压缩的过程中显示档案,这个常用，但不建议用在背景执行过程<br>-f：使用档名，请留意，在 f 之后要立即接档名 不要再加参数</p>
+<p><strong>参数</strong>：<br><code>-c</code>：建立一个压缩档案的参数指令(create的意思)<br><code>-x</code>：解开一个压缩档案的参数指令<br><code>-t</code>：查看tarfile 里面的档案    </p>
+<p><em>特别注意</em>，在参数的下达中， <code>c/x/t</code> 仅能存在一个, 不可同时存在.</p>
+<p><code>-z</code>：是否同时具有 gzip 的属性？亦即是否需要用 gzip 压缩？<br><code>-j</code>：是否同时具有 bzip2 的属性？亦即是否需要用 bzip2 压缩？<br><code>-v</code>：压缩的过程中显示档案,这个常用，但不建议用在背景执行过程<br><code>-f</code>：使用档名，请留意，在 f 之后要立即接档名 不要再加参数</p>
 <p>–exclude FILE：在压缩的过程中，不要将 FILE 打包！</p>
 ]]></content>
     </entry>
@@ -62,7 +61,7 @@
     <entry>
       <title><![CDATA[grep命令]]></title>
       <url>http://tworeed.me/2016/09/10/grep%E5%91%BD%E4%BB%A4/</url>
-      <content type="html"><![CDATA[<h2 id="grep命令"><a href="#grep命令" class="headerlink" title="grep命令"></a>grep命令</h2><blockquote>
+      <content type="html"><![CDATA[<blockquote>
 <p>grep命令是一种强大的文本搜索工具，它能使用正则表达式搜索文本，并把匹配的行打印出来。   </p>
 </blockquote>
 <h3 id="在文件中查找模式（单词）"><a href="#在文件中查找模式（单词）" class="headerlink" title="在文件中查找模式（单词）"></a>在文件中查找模式（单词）</h3><p>在 makefile 中查找 PROGRAM 字符串.<br><strong>grep PROGRAM makefile</strong><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">grep PROGRAM makefile</div><div class="line"><span class="comment">#    * to specify your favorite program name, set to &lt;PROGRAM&gt;</span></div><div class="line">PROGRAM   = mytest</div><div class="line">ifeq ($(PROGRAM),)</div><div class="line">  PROGRAM = $(word $(words $(CUR_PATH_NAMES)),$(CUR_PATH_NAMES))</div><div class="line">  ifeq ($(PROGRAM),)</div><div class="line">    PROGRAM = a.out</div><div class="line">all: $(PROGRAM)</div><div class="line">$(PROGRAM):$(OBJS)</div><div class="line">	$(RM) $(OBJS) $(PROGRAM) $(PROGRAM).exe</div><div class="line">	@<span class="built_in">echo</span> <span class="string">'PROGRAM     :'</span> $(PROGRAM)</div></pre></td></tr></table></figure></p>
